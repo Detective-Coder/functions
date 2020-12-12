@@ -37,3 +37,17 @@ travelPlanner("Aaron", "New Orleans");
 travelPlanner("Mary", "Italy");
 travelPlanner("Ringo", "Japan");
 
+// Write a function to represent a taco truck's ordering system. The function should accept two parameters: typeOfShell and topping. (Both will be strings.)
+function orderSystem(typeOfShell, topping) {
+  let sentence = `Your ${typeOfShell} taco with ${topping} is ready.`;
+  return sentence;
+}
+
+let tacoSentence = orderSystem("soft", "beef");
+console.log(tacoSentence);
+
+// Inside the function, use string interpolation to build a sentence that announces the taco is ready. Use the information the customer passed in. For example: "Your soft shell taco with chicken is ready!"
+// Return the taco sentence and store the returned sentence in a variable.
+// Execute the function.
+// Log the returned sentence to the console.
+
