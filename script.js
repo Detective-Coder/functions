@@ -179,3 +179,40 @@ function printHobbies(){
 // Call the printHobbies function.
 printHobbies();
 
+let partyGuests = [
+  {
+    name: "Sam",
+    age: 18
+  },
+  {
+    name: "Jerry",
+    age: 45
+  },
+  {
+    name: "Lila",
+    age: 29
+  },
+  {
+    name: "Mary",
+    age: 68
+  },
+  {
+    name: "Todd",
+    age: 10
+  }
+]
+
+function ageChecker(){
+  for (let i = 0; i < partyGuests.length; i++) {
+    if (partyGuests[i].age >= 21) {
+      console.log(`${partyGuests[i].name} can drink.`);
+    } else {
+      console.log(`${partyGuests[i].name} is too young.`);
+    }
+  }
+}
+
+ageChecker();
+// Loop through the partyGuests and check if each guest is at least 21.
+// Build a sentence or two about who can drink and who can't. (Example: " "Jery, Lila, and Mary can drink. Sam and Todd are too young.")
+// Log the sentence to the console.
