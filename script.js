@@ -166,14 +166,16 @@ let dwayneObject = {
   nickName: "The Rock",
   lastName: "Johnson",
   favoriteFood: "Eggs",
-  hobbies: ["jumping out of planes", "personally holding the  San Andreas fault together", "building incredible muscle mass"]
+  hobbies: ["jumping out of planes", "personally holding the San Andreas fault together", "building incredible muscle mass"]
 }
 
 function printHobbies(){
-
+  for (let i = 0; i < dwayneObject.hobbies.length; i++) {
+    console.log(dwayneObject.hobbies[i]);
+  }
 }
 // The printHobbies function should loop through the array of Dwayne The Rock Johnson's hobbies and print each one to the console.
 
 // Call the printHobbies function.
-
+printHobbies();
 
