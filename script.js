@@ -204,6 +204,8 @@ let partyGuests = [
 
 function ageChecker(){
   for (let i = 0; i < partyGuests.length; i++) {
+    let over21Array = [];
+    let under21Array = [];
     if (partyGuests[i].age >= 21) {
       console.log(`${partyGuests[i].name} can drink.`);
     } else {
