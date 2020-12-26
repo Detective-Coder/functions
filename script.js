@@ -200,21 +200,43 @@ let partyGuests = [
     name: "Todd",
     age: 10
   }
-]
+];
 
-function ageChecker(){
-  for (let i = 0; i < partyGuests.length; i++) {
-    let over21Array = [];
-    let under21Array = [];
-    if (partyGuests[i].age >= 21) {
-      console.log(`${partyGuests[i].name} can drink.`);
-    } else {
-      console.log(`${partyGuests[i].name} is too young.`);
-    }
+// Define the age checker function
+// Function should accept two parameters: an array and an age to check
+// Function should return an array of people who are at or above the cut off age
+
+function ageChecker(peopleArray, cutOffAge) {
+  let peopleWhoAreOldEnough = [];
+  for (let i = 0; i < peopleArray.length; i++) {
+    // check each person's age to see if it's at or above the cut off age we passed in
+    if (peopleArray[i].age >= cutOffAge) {
+      peopleWhoAreOldEnough.push(peopleArray[i]);
+    } 
   }
+  // once we've checked (i.e. looped over) every person in the array, we need to return the array of just people who are old enough
+  return peopleWhoAreOldEnough;
 }
 
-ageChecker();
+function underageChecker(peopleArray, cutOffAge) {
+  let peopleWhoAreNotOldEnough = [];
+  for (let i = 0; i < peopleArray.length; i++) {
+    if (peopleArray[i].age < cutOffAge) {
+      peopleWhoAreNotOldEnough.push(peopleArray[i]);
+    }
+  }
+  return peopleWhoAreNotOldEnough;
+}
+
+// Execute the function
+// Since it now RETURNS an array, we have to catch the returned value in a variable
+let peopleWhoCanDrink = ageChecker(partyGuests, 21);
+let peopleWhoCannotDrink = underageChecker(partyGuests, 21);
+console.log(peopleWhoCanDrink);
+console.log(peopleWhoCannotDrink);
+console.log(`${peopleWhoCanDrink[0].name}, ${peopleWhoCanDrink[1].name}, and ${peopleWhoCanDrink[2].name} can drink. ${peopleWhoCannotDrink[0].name} and ${peopleWhoCannotDrink[1].name} are too young.`);
 // Loop through the partyGuests and check if each guest is at least 21.
 // Build a sentence or two about who can drink and who can't. (Example: " "Jery, Lila, and Mary can drink. Sam and Todd are too young.")
 // Log the sentence to the console.
+
+//  Make your function more reusable by adding parameters! Let's say that your next task is to sort through an array of people and figure out who is old enough to vote, not drink. You could write another function that does approximately the same thing, but with an array of potential voters and the cut off age of 18 instead of 21. But that would be a lot of repeat code, and our goal is to repeat ourselves as little as possible! Refactor your ageChecker function so that it accepts two parameters: an array of objects representing people (assume that they will be structured like the objects in the partyGuests array) and an age to check for. 
