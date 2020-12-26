@@ -240,3 +240,26 @@ console.log(`${peopleWhoCanDrink[0].name}, ${peopleWhoCanDrink[1].name}, and ${p
 // Log the sentence to the console.
 
 //  Make your function more reusable by adding parameters! Let's say that your next task is to sort through an array of people and figure out who is old enough to vote, not drink. You could write another function that does approximately the same thing, but with an array of potential voters and the cut off age of 18 instead of 21. But that would be a lot of repeat code, and our goal is to repeat ourselves as little as possible! Refactor your ageChecker function so that it accepts two parameters: an array of objects representing people (assume that they will be structured like the objects in the partyGuests array) and an age to check for. 
+
+// You'll be writing two functions: one that converts Celsius to Fahrenheit and the other, vice versa.
+
+// Write a function that takes the temperature in Celsius as the parameter
+// The function should do the following calculation to get the temperature in Fahrenheit: T(F) = T(C) * 1.8 + 32
+// Output the temperature in Fahrenheit to the console
+function celsiusToFahrenheit(celsiusTemperature) {
+  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
+  console.log(`You entered ${celsiusTemperature} Celsius. That converts to ${fahrenheitTemperature} Fahrenheit.`);
+}
+
+celsiusToFahrenheit(80);
+// Write a second function that takes the temperature in Fahrenheit as the parameter
+// The function should do the following calculation to get the temperature in Celsius: T(C) = (T(F) - 32) / 1.8
+// Output the temperature in Celsius to the console
+// Example output:
+// "You entered [degrees in Celsius] Celsius. That converts to [degrees in Fahrenheit] Fahrenheit." "You entered [degrees in Fahrenheit] Fahrenheit. That converts to [degrees in Celsius] Celsius."
+function fahrenheitToCelsius(temperatureInFahrenheit) {
+  let temperatureInCelsius = (temperatureInFahrenheit - 32) / 1.8;
+  console.log(`You entered ${temperatureInFahrenheit} Fahrenheit. That converts to ${temperatureInCelsius} Celsuis.`);
+}
+
+fahrenheitToCelsius(70);
