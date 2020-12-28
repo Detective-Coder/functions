@@ -286,3 +286,26 @@ console.log(mySum);
 // Save the returned value in a variable called mySum.
 // Log mySum to the console.
 // Try changing the numbers in the array or adding new numbers.
+
+let scoresToAverage =  [22, 34, 62, 11, 90, 88, 70, 65, 22, 89, 85, 39, 71, 92, 98, 84, 100, 85, 90, 95, 98];
+
+// In your JavaScript file, define a function named findAverage.
+let numbersSum = 0;
+
+function findAverage(arrayOfNumbers) {
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    numbersSum += arrayOfNumbers[i];
+    finalAverage = numbersSum / arrayOfNumbers.length;
+  }
+  return finalAverage;
+}
+
+let myAverage = findAverage(scoresToAverage);
+console.log(myAverage);
+// The function should accept one argument: an array of numbers.
+// Inside the function, loop over the array of numbers parameter and find their average.
+// The findAverage function should return the average of all the numbers.
+// Call findAverage and pass in scoresToAverage as an argument.
+// Save the returned value in a variable called myAverage.
+// Log myAverage to the console.
+// Try adding new numbers to the outsideArray. Your function should still return the correct average no matter how many items are in the array.
