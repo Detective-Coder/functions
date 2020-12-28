@@ -263,3 +263,26 @@ function fahrenheitToCelsius(temperatureInFahrenheit) {
 }
 
 fahrenheitToCelsius(70);
+
+let outsideArray =  [100, 700, 8008, 1100, 9000, -1];
+
+// In your JavaScript file, create (declare) a function named addThemUp.
+let numbersTotal = 0;
+
+function addThemUp(numbersArray) {
+  for(let i = 0; i < numbersArray.length; i++) {
+    numbersTotal += numbersArray[i];
+  }
+  return numbersTotal;
+}
+
+let mySum = addThemUp(outsideArray);
+console.log(mySum);
+
+// The function should accept one argument: an array of numbers.
+// Inside the function, loop over the array of numbers parameter and add them up to a running sum.
+// The addThemUp function should return the sum.
+// Call addThemUp and pass in outsideArray as an argument.
+// Save the returned value in a variable called mySum.
+// Log mySum to the console.
+// Try changing the numbers in the array or adding new numbers.
