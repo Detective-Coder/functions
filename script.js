@@ -309,3 +309,21 @@ console.log(myAverage);
 // Save the returned value in a variable called myAverage.
 // Log myAverage to the console.
 // Try adding new numbers to the outsideArray. Your function should still return the correct average no matter how many items are in the array.
+
+// You work for an online clothing retailer. Every time an order ships, your company needs to calculate the cost of shipping so they can charge the customer correctly. Because they need to make this calculation so many times and in so many places, they've asked you to write a function that calculates shipping cost based on package weight, distance to destination, and whether or not the package is oversized.
+// The cost of shipping is always the weight of the package multiplied by the distance it needs to travel, divided by 100.
+// If the package is oversized, it adds ten dollars to the cost of shipping.
+// Write a function that accepts whatever information you need to calculate the cost of shipping and returns the cost as an integer.
+// Execute the function and output the result to the console.
+let totalCost = 0;
+
+function shippingCost(weight, distance, oversized) {
+  totalCost = weight * distance / 100;
+  if (oversized) {
+    totalCost += 10;
+  }
+  return totalCost;
+}
+
+let shippingTotal = shippingCost(50, 80, false);
+console.log(shippingTotal);
